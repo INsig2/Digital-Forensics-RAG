@@ -27,8 +27,8 @@ Ensure you have these installed on your system:
 ### Step 1: Clone the Repository
 
 ```bash
-git clone <your-repo-url>
-cd DF_RAG
+git clone https://github.com/INsig2/Digital-Forensics-RAG.git
+cd Digital-Forensics-RAG
 ```
 
 ### Step 2: Populate the Data Folder
@@ -36,7 +36,7 @@ cd DF_RAG
 Place your PDF documents into the `data` directory. This folder is initially empty and ready for your data.
 
 ```
-DF_RAG/
+Digital-Forensics-RAG/
 └── data/
     ├── example1.pdf
     └── example2.pdf
