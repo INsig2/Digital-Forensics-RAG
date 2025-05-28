@@ -1,4 +1,3 @@
-# vector_builder.py
 import os
 from langchain_community.document_loaders import PDFPlumberLoader
 from langchain_experimental.text_splitter import SemanticChunker
