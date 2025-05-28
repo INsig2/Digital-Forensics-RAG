@@ -23,6 +23,8 @@ Ensure you have these installed on your system:
 
 * [Docker](https://www.docker.com/get-started/) (required)
 * Git
+* [Ollama](https://ollama.com/) (required)
+* In terminal install deepseek-r1 model with command `ollama run deepseek-r1`
 
 ### Step 1: Clone the Repository
 
