@@ -4,7 +4,7 @@ from langchain_community.document_loaders import PDFPlumberLoader
 from langchain_experimental.text_splitter import SemanticChunker
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
-
+import torch
 
 def build_faiss_index(
     data_folder: str = "data", index_path: str = "faiss_index",
@@ -15,7 +15,8 @@ def build_faiss_index(
     embed them, build a FAISS index, and save it to `index_path`.
     """
     # Initialize embedder with explicit model_name
-    embedder = HuggingFaceEmbeddings(model_name=model_name,  model_kwargs={"device": "cuda"})
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    embedder = HuggingFaceEmbeddings(model_name=model_name, model_kwargs={"device": device})
 
     # Aggregate chunks
     all_docs = []
